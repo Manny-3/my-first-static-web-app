@@ -125,3 +125,32 @@ body{background-image:linear-gradient(180deg, rgba(37,99,235,0.02), transparent 
 .header{padding:1rem 0}
 .nav-links a{padding:.35rem .6rem;border-radius:8px}
 .nav-links a:hover{background:linear-gradient(90deg, rgba(37,99,235,0.06), transparent)}
+
+/* Responsive: móviles y pantallas pequeñas */
+@media (max-width:799px){
+  body{font-size:15px}
+  .header, .footer{padding:0.75rem 1rem}
+  .nav-links{display:flex;gap:.4rem;align-items:center}
+  .nav-links a{margin-left:0;padding:.3rem .45rem;font-size:.9rem}
+  .hero{flex-direction:column;align-items:flex-start;padding:1.25rem}
+  .hero-visual{width:140px;height:100px;border-radius:10px}
+  .btn{width:100%;display:block;text-align:center}
+  .btn.secondary{margin-top:.5rem}
+  .grid{grid-template-columns:1fr}
+  main{margin:1rem; padding:1rem}
+  .timeline{padding-left:1.25rem}
+  .timeline:before{left:16px;width:3px}
+  .timeline-marker{width:14px;height:14px;left:10px}
+  .timeline-item{padding:.6rem 0}
+}
+
+@media (max-width:479px){
+  :root{--gap:.75rem}
+  body{font-size:14px}
+  .hero-visual{display:none}
+  .nav-links{overflow:auto}
+  .nav-links a{white-space:nowrap}
+  .timeline-content time{font-size:.8rem}
+  .hero h2{font-size:1.25rem}
+  .card{padding:.8rem}
+}
