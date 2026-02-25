@@ -1,15 +1,170 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <title>Vanilla JavaScript App</title>
+    <title>Aprende Voleibol — Básico y Historia</title>
   </head>
 
   <body>
+    <nav class="header">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+        "
+      >
+        <div>
+          <h1 style="margin: 0; font-size: 1.25rem">Aprende Voleibol</h1>
+          <p class="muted" style="margin: 0; font-size: 0.9rem">
+            Historia, reglas y técnicas básicas
+          </p>
+        </div>
+        <div class="nav-links">
+          <a href="#historia">Historia</a>
+          <a href="#reglas">Cómo se juega</a>
+          <a href="#tecnicas">Técnicas</a>
+        </div>
+      </div>
+    </nav>
+
     <main>
-      <h1>Vanilla JavaScript App</h1>
+      <section class="hero">
+        <div>
+          <h2>Voleibol: pasión, equipo y técnica</h2>
+          <p class="muted">
+            Un resumen claro y minimalista para empezar a jugar y entender este
+            deporte.
+          </p>
+          <p style="margin-top: 0.8rem">
+            <a class="btn" href="#reglas">Comenzar</a>
+            <a class="btn secondary" href="#historia">Leer historia</a>
+          </p>
+        </div>
+        <div class="hero-visual" aria-hidden="true"></div>
+      </section>
+
+      <section id="historia">
+        <h3>Historia breve</h3>
+        <div class="container">
+          <article class="card">
+            <h4>Origen</h4>
+            <p>
+              El voleibol fue creado en 1895 por William G. Morgan en Estados
+              Unidos como una alternativa de menos contacto que el baloncesto.
+              Desde entonces ha evolucionado hasta convertirse en un deporte
+              olímpico y popular en todo el mundo.
+            </p>
+          </article>
+          <article class="card">
+            <h4>Evolución</h4>
+            <p>
+              El deporte incorporó reglas modernas, sistemas de rotación y el
+              conteo de puntos por rally. El voleibol de playa surgió como
+              variante y popularizó el deporte en arenas y eventos
+              internacionales.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="reglas">
+        <h3>Cómo se juega (básico)</h3>
+        <div class="grid">
+          <div class="card">
+            <h4>Objetivo</h4>
+            <p>
+              Enviar el balón al campo rival y evitar que caiga en el propio. Se
+              juega en equipos de 6 jugadores en cancha cubierta; en playa, 2
+              por equipo.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Cancha y puntuación</h4>
+            <p>
+              La cancha mide 18x9 m dividida por una red. Los partidos se juegan
+              al mejor de 5 sets; cada set hasta 25 puntos (con ventaja de 2),
+              el quinto a 15.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Rotación</h4>
+            <p>
+              Tras ganar el servicio, el equipo rota en sentido horario para
+              cambiar posiciones y responsabilidades.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Toques</h4>
+            <p>
+              Máximo de 3 toques por equipo antes de devolver la pelota. Un
+              mismo jugador no puede tocarla dos veces consecutivas, salvo en
+              bloqueo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tecnicas">
+        <h3>Técnicas básicas</h3>
+        <div class="grid">
+          <div class="card">
+            <h4>Saque</h4>
+            <p>
+              Inicio de la jugada. Puede ser por abajo, por arriba o salto. Debe
+              cruzar la red y entrar al campo contrario.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Recepción</h4>
+            <p>
+              Primer toque defensivo para controlar el balón y dirigirlo al
+              colocador.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Colocación</h4>
+            <p>
+              Toque técnico que prepara el balón para el remate; precisión y
+              buena ubicación son clave.
+            </p>
+          </div>
+          <div class="card">
+            <h4>Remate (Spike)</h4>
+            <p>
+              Ataque final con salto para enviar el balón con potencia hacia la
+              cancha rival.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Consejos para principiantes</h3>
+        <ul>
+          <li>
+            Practica la recepción y la colocación: son la base del juego
+            ofensivo.
+          </li>
+          <li>
+            Comunicación constante: llama la pelota y coordina con tu equipo.
+          </li>
+          <li>
+            Aprende posiciones y rotación para mantener el orden en la cancha.
+          </li>
+        </ul>
+      </section>
     </main>
+
+    <footer class="footer center muted">
+      &copy; Aprende Voleibol — Contenido educativo (ejemplo)
+    </footer>
   </body>
 </html>
