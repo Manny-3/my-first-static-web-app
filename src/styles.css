@@ -1,21 +1,71 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+/* Global reset and sensible defaults */
+:root{
+  --bg:#f7fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --accent-2:#06b6d4;
+  --radius:12px;
+  --max-width:900px;
+  --gap:1rem;
 }
 
-html, body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background-color: #fff;
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.5;
 }
 
-main {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
+/* Page container */
+main{
+  width:clamp(320px, 90%, var(--max-width));
+  margin:clamp(1rem, 4vw, 3rem) auto;
+  padding:clamp(1rem, 2.5vw, 2rem);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 6px 18px rgba(15,23,42,0.06);
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 3.5em;
+/* Typography */
+main > h1{
+  font-size:clamp(1.6rem, 4vw, 2.25rem);
+  text-align:center;
+  margin-bottom:.25rem;
 }
+main p{color:var(--muted);margin-top:.75rem}
+
+/* Links & buttons */
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+button, .btn{
+  display:inline-block;padding:.6rem 1rem;border-radius:10px;border:0;cursor:pointer;font-weight:600;background:var(--accent);color:#fff
+}
+.btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(37,99,235,0.12)}
+
+/* Utilities */
+.container{display:flex;flex-direction:column;gap:var(--gap)}
+.center{text-align:center}
+img{max-width:100%;height:auto;border-radius:8px}
+
+/* Header / footer spacing */
+.header,.footer{width:clamp(320px,90%,var(--max-width));margin:1rem auto;padding:0 1rem}
+
+/* Responsive tweaks */
+@media (min-width:768px){
+  .container{flex-direction:row}
+  main{padding:2.5rem}
+}
+
+/* Small form elements */
+input,textarea,select{width:100%;padding:.6rem .75rem;border:1px solid #e6e9ee;border-radius:8px;background:transparent}
+
+/* Subtle helper classes */
+.muted{color:var(--muted)}
+.shadow-sm{box-shadow:0 4px 10px rgba(15,23,42,0.05)}
